@@ -20,6 +20,8 @@
 		C06BBE771F8269E9006818CC /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C06BBE711F8269E9006818CC /* GFGeoHashQuery.m */; };
 		C06BBE781F8269E9006818CC /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = C06BBE731F8269E9006818CC /* GFQuery.m */; };
 		C06BBE811F827C77006818CC /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06BBE801F827C77006818CC /* PokeAnnotation.swift */; };
+		C0EEC90A1F828E2700D5A084 /* AddNewPokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EEC9091F828E2700D5A084 /* AddNewPokemonVC.swift */; };
+		C0EEC90C1F82903100D5A084 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EEC90B1F82903100D5A084 /* PokeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		C06BBE731F8269E9006818CC /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		C06BBE7C1F826B4E006818CC /* PokeFinder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PokeFinder-Bridging-Header.h"; sourceTree = "<group>"; };
 		C06BBE801F827C77006818CC /* PokeAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
+		C0EEC9091F828E2700D5A084 /* AddNewPokemonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewPokemonVC.swift; sourceTree = "<group>"; };
+		C0EEC90B1F82903100D5A084 /* PokeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 		CEFD6133287244569F48BD75 /* Pods-PokeFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeFinder/Pods-PokeFinder.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				C06BBE501F82680D006818CC /* ViewController.swift */,
+				C0EEC9091F828E2700D5A084 /* AddNewPokemonVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 		C06BBE7F1F827C45006818CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C0EEC90B1F82903100D5A084 /* PokeCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,9 +323,11 @@
 				C06BBE811F827C77006818CC /* PokeAnnotation.swift in Sources */,
 				C06BBE511F82680D006818CC /* ViewController.swift in Sources */,
 				C06BBE761F8269E9006818CC /* GFGeoHash.m in Sources */,
+				C0EEC90C1F82903100D5A084 /* PokeCell.swift in Sources */,
 				C06BBE4F1F82680D006818CC /* AppDelegate.swift in Sources */,
 				C06BBE741F8269E9006818CC /* GeoFire.m in Sources */,
 				C06BBE771F8269E9006818CC /* GFGeoHashQuery.m in Sources */,
+				C0EEC90A1F828E2700D5A084 /* AddNewPokemonVC.swift in Sources */,
 				C06BBE781F8269E9006818CC /* GFQuery.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

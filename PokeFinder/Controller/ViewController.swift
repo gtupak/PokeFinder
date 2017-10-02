@@ -29,11 +29,6 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
         geoFire = GeoFire(firebaseRef: geoFireRef)
     }
     
-    func createSighting(forLocation location: CLLocation, withPokeon pokeId: Int) {
-        
-        geoFire.setLocation(location, forKey: "\(pokeId)")
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         locationAuthStatus()
     }
@@ -54,7 +49,7 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
     }
     
     func centerMapOnLocation(location: CLLocation) {
-        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 2000, 2000)
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 750, 750)
         
         mapView.setRegion(coordinateRegion, animated: true)
     }
@@ -131,14 +126,21 @@ class ViewController: UIViewController , MKMapViewDelegate, CLLocationManagerDel
             MKMapItem.openMaps(with: [destination], launchOptions: options)
         }
     }
-
-    @IBAction func spotRandomPokemon(_ sender: Any) {
-        let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
-        
-        let rand = arc4random_uniform(151) + 1
-        createSighting(forLocation: loc, withPokeon: Int(rand))
+    
+    @IBAction func pokeballPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "AddNewPokemonVC", sender: sender)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "AddNewPokemonVC" {
+            if let newPokeVC = segue.destination as? AddNewPokemonVC {
+                newPokeVC.preferredContentSize = CGSize(width: 300, height: 700)
+                
+                newPokeVC.location = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
+                newPokeVC.geoFire = geoFire
+            }
+        }
+    }
 }
 
 
